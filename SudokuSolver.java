@@ -12,7 +12,7 @@ public class SudokuSolver
     private HashSet<Character> cols[] = new HashSet[9];
     private HashSet<Character> boxes[] = new HashSet[9];
 
-    public void fill()
+    private void fill()
     {
         Scanner sc = new Scanner(System.in);
 
@@ -25,7 +25,7 @@ public class SudokuSolver
         }
     }
 
-    public void printSolution()
+    private void printSolution()
     {
         for(int i=0;i<9;i++)
         {
@@ -37,7 +37,7 @@ public class SudokuSolver
         }
     }
 
-    public boolean isValidSudoku() 
+    private boolean isValidSudoku() 
     {   
         for (int r = 0; r < 9; r++) 
         {
@@ -76,7 +76,7 @@ public class SudokuSolver
         return true;
     }
 
-    public void solveSudoku() 
+    private void solveSudoku() 
     {        
         for(int i=0;i<9;i++)
         {
@@ -94,7 +94,7 @@ public class SudokuSolver
         fun(0,0);
     }
 
-    public void fun(int i,int j)
+    private void fun(int i,int j)
     {
         if(i>=9 || j>=9)
         {
